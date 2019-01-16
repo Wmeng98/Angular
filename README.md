@@ -1,4 +1,6 @@
 # Angular
 
-- Implementation of Angular Tour of Heroes beginner tutorial
+- Implementation of various tutorial/personal projects
+- Utilizing the power of Angular
+- Projects are organized by branching
 
