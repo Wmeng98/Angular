@@ -2,14 +2,20 @@
 
 <ul class="heroes">
     <!-- Angualr calls onSelect method with the hero objecct displayed in the clicked -->
-  <li *ngFor="let hero of heroes" 
-      (click)="onSelect(hero)"
-      [class.selected]="hero === selectedHero"  
-    > 
+  <li *ngFor="let hero of heroes">
+      <!-- (click)="onSelect(hero)"
+      [class.selected]="hero === selectedHero"   -->
+    
     <!-- class binding: easy to add/remove a CSS class conditionally -->
     <!-- When curr row hero is same as the selectedHero, Angular adds the selected CSS class important  -->
-    <span class="badge">{{hero.id}}</span> {{hero.name}}//
+    <!-- <span class="badge">{{hero.id}}</span> {{hero.name}}// -->
+
+
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+
+    
   </li>
 </ul>
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
